@@ -1,0 +1,14 @@
+<div class="container_fluid">
+  <img class="page_title" src="assets/cards_image/Star_Wars_Logo1.png">
+  <div class="row">
+    <div *ngFor="let planet of planetData()" class="planet-cards">
+      <app-planet-card
+      [planetData]="planet"
+      ></app-planet-card>
+    </div>
+  </div>
+  <div class="footer">
+    <img src="assets/cards_image/arrow.png" class="footer_1" *ngIf="prevPageUrl() != null" (click)="goToPrev()">
+    <img src="assets/cards_image/right-arrow.png" class="footer_2" *ngIf="nextPageUrl() != null" (click)="goToNext()">
+  </div>
+</div>

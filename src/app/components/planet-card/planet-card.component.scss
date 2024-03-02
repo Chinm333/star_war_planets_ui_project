@@ -1,0 +1,106 @@
+:host {
+  display: block;
+  perspective: 600px;
+}
+
+.card {
+  box-shadow: 10px 10px 43px -18px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  height: 300px;
+  width: 250px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  backface-visibility: hidden;
+  background-image: url('../../../assets/cards_image/universe.jpg');
+
+  .top{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: inherit;
+  }
+  .bottom{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+    .top{
+      animation: rotation 6s infinite linear;
+    }
+
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .planet_data{
+      margin-top: -2rem;
+      background-color: #fff;
+      height: 25vh;
+      border-radius: 0px 0px 12px 12px;
+      h1{
+        text-align: center;
+        color: #7f7e7e;
+      }
+    }
+    .planet_data_back{
+      margin-top: -2rem;
+      background-color: #fff;
+      height: auto;
+      border-radius: 0px 0px 12px 12px;
+      z-index: 999;
+      position: relative;
+    }
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+// table
+
+td,thead{
+  font-size: 12px;
+}
+.data_with_image{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  .group_data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+    span{
+      text-transform: capitalize;
+      font-size: 14px;
+      font-weight: 700;
+      color: #5d5b5b;
+      line-height: 1rem;
+      text-align: center;
+      margin-left: 5px;
+    }
+  }
+}
+

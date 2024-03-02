@@ -1,0 +1,27 @@
+.container_fluid{
+  .page_title{
+    width: 5rem;
+    margin-bottom: -2rem;
+  }
+  .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .planet-cards{
+      margin: 2rem;
+      height: 70vh;
+
+    }
+  }
+}
+.footer{
+  display: flex;
+  justify-content: flex-end;
+  img{
+    width: 50px;
+  }
+  .footer_1{
+    margin-right: 2rem;
+  }
+}
